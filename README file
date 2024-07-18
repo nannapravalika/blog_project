@@ -1,0 +1,42 @@
+# Django Blog Application
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```sh
+   git clone <repository_url>
+   cd blog_project
+   ```
+
+2. Create a virtual environment and install dependencies:
+   ```sh
+   python -m venv env
+   source env/bin/activate  # On Windows use `env\Scripts\activate`
+   pip install -r requirements.txt
+   ```
+
+3. Apply the migrations:
+   ```sh
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+
+4. Create a superuser:
+   ```sh
+   python manage.py createsuperuser
+   ```
+
+5. Run the server:
+   ```sh
+   python manage.py runserver
+   ```
+
+## API Endpoints
+
+- `POST /api/posts/`: Create a new post.
+- `GET /api/posts/`: Retrieve all posts.
+- `GET /api/posts/<id>/`: Retrieve a single post.
+- `PUT /api/posts/<id>/`: Update a post.
+- `DELETE /api/posts/<id>/`: Delete a post.
+- `POST /api/posts/<post_id>/comments/`: Create a new comment for a post.
+- `GET /api/posts/<post_id>/comments/`: Retrieve all comments for a post.
